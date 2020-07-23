@@ -28,8 +28,13 @@ const DisplayData = () => {
 
   return (
     <div>
+      {/* Contacts */}
       {organizations.length > 0 ? (
-        <ReactTable data={organizations} columns={columns} />
+        <ReactTable
+          defaultPageSize={10}
+          data={organizations}
+          columns={columns}
+        />
       ) : null}
     </div>
   );
